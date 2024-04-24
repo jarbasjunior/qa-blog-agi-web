@@ -1,5 +1,5 @@
 {
-  "name": "blog-agi-web",
+  "name": "qa-blog-agi-web",
   "version": "1.0.0",
   "description": "Projeto de testes Web da aplicação blogdoagi",
   "main": "index.js",
