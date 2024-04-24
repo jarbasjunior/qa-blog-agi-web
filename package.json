@@ -1,0 +1,24 @@
+{
+  "name": "blog-agi-web",
+  "version": "1.0.0",
+  "description": "Projeto de testes Web da aplicação blogdoagi",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run -b chrome",
+    "cypress": "npx cypress open",
+    "lint-check": "eslint cypress/factories/** cypress/integration/** cypress/pages/** cypress/support/**",
+    "lint-fix": "eslint cypress/integration/** cypress/pages/** --fix",
+    "prepare": "husky install"
+  },
+  "author": "Jarbas Junior",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^9.2.1",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "eslint-plugin-import": "^2.25.4",
+    "faker": "^5.5.3",
+    "husky": "^7.0.4"
+  }
+}
