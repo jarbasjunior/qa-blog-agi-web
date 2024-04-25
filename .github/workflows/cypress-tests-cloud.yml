@@ -1,0 +1,34 @@
+name: Cypress UI Tests Cloud
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      spec:
+        description: Run cypress by command line
+        default: cypress/integration/*
+
+jobs:
+  ui-chrome-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3.3.0
+      
+      - name: 'UI Tests Chrome'
+        uses: cypress-io/github-action@v6.5.0
+        with:
+          install-command: npm install
+          browser: chrome
+          record: true
+          group: 'UI Chrome'
+          spec: ${{ github.event.inputs.spec }}
+          wait-on: ${{ secrets.BASE_URL }}
+          wait-on-timeout: 120
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
