@@ -1,5 +1,13 @@
 {
   "viewportWidth": 1440,
   "viewportHeight": 900,
-  "baseUrl": "https://blogdoagi.com.br"
+  "baseUrl": "https://blogdoagi.com.br",
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "overwrite": true,
+    "html": true,
+    "json": false,
+    "timestamp": "yyyy-mm-dd_HHMMss"
+  }
 }

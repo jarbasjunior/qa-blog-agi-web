@@ -4,11 +4,12 @@
   "description": "Projeto de testes Web da aplicação blogdoagi",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress run -b chrome",
+    "test": "npm run report:clean && npx cypress run -b chrome",
     "cypress": "npx cypress open",
-    "lint-check": "eslint cypress/factories/** cypress/integration/** cypress/pages/** cypress/support/**",
+    "lint-check": "eslint cypress/integration/** cypress/pages/** cypress/support/**",
     "lint-fix": "eslint cypress/integration/** cypress/pages/** --fix",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "report:clean": "rm -rf cypress/reports/*"
   },
   "author": "Jarbas Junior",
   "license": "MIT",
@@ -20,6 +21,9 @@
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-import": "^2.25.4",
     "faker": "^5.5.3",
-    "husky": "^7.0.4"
+    "husky": "^7.0.4",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
