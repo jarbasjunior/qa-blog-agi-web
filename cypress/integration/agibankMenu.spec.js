@@ -38,3 +38,22 @@ describe('Dado que acesso o menu Agibank > Notícias', () => {
     });
   });
 });
+
+describe('Dado que acesso o menu Agibank > Carreira', () => {
+  const expectedTitle = 'Carreira';
+
+  before(() => {
+    cy.visit('/');
+    navbarPage.goToAgibankCareerPage();
+  });
+
+  context('Quando página Carreira for acessada deve exibir:', () => {
+    it(`Título da seção = [${expectedTitle}]`, () => {
+      columnsPage.validationTitleSection(expectedTitle);
+    });
+
+    it(`Cada artigo da listado com o título = [${expectedTitle}]`, () => {
+      columnsPage.validationTitleArticles(expectedTitle);
+    });
+  });
+});
