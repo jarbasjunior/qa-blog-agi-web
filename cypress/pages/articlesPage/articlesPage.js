@@ -1,4 +1,4 @@
-const locators = require('./locators');
+import locators from './locators';
 
 class ArticlesPage {
   static validationTitleSection(expectedTitle) {

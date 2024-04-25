@@ -1,5 +1,5 @@
-const navbarPage = require('../pages/navbarPage/NavbarPage');
-const columnsPage = require('../pages/articlesPage/articlesPage');
+import navbarPage from '../pages/navbarPage/NavbarPage';
+import articlesPage from '../pages/articlesPage/articlesPage';
 
 describe('Dado que acesso o menu Agibank > Colunas', () => {
   const expectedTitle = 'Colunas';
@@ -11,11 +11,11 @@ describe('Dado que acesso o menu Agibank > Colunas', () => {
 
   context('Quando página Colunas for acessada deve exibir:', () => {
     it(`Título da seção = [${expectedTitle}]`, () => {
-      columnsPage.validationTitleSection(expectedTitle);
+      articlesPage.validationTitleSection(expectedTitle);
     });
 
     it(`Cada artigo da listado com o título = [${expectedTitle}]`, () => {
-      columnsPage.validationTitleArticles(expectedTitle);
+      articlesPage.validationTitleArticles(expectedTitle);
     });
   });
 });
@@ -30,11 +30,11 @@ describe('Dado que acesso o menu Agibank > Notícias', () => {
 
   context('Quando página Notícias for acessada deve exibir:', () => {
     it(`Título da seção = [${expectedTitle}]`, () => {
-      columnsPage.validationTitleSection(expectedTitle);
+      articlesPage.validationTitleSection(expectedTitle);
     });
 
     it(`Cada artigo da listado com o título = [${expectedTitle}]`, () => {
-      columnsPage.validationTitleArticles(expectedTitle);
+      articlesPage.validationTitleArticles(expectedTitle);
     });
   });
 });
@@ -49,11 +49,11 @@ describe('Dado que acesso o menu Agibank > Carreira', () => {
 
   context('Quando página Carreira for acessada deve exibir:', () => {
     it(`Título da seção = [${expectedTitle}]`, () => {
-      columnsPage.validationTitleSection(expectedTitle);
+      articlesPage.validationTitleSection(expectedTitle);
     });
 
     it(`Cada artigo da listado com o título = [${expectedTitle}]`, () => {
-      columnsPage.validationTitleArticles(expectedTitle);
+      articlesPage.validationTitleArticles(expectedTitle);
     });
   });
 });
